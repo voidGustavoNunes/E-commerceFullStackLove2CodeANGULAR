@@ -56,8 +56,11 @@ export class Product {
     this._sku = value;
   }
 
-
+  public get id(): number {
+    return this._id;
+  }
   constructor(
+    private _id: number,
     private _name: string,
     private _sku: string,
     private _description: string,
