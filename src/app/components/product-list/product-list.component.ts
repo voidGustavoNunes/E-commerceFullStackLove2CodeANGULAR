@@ -14,7 +14,6 @@ import { ActivatedRoute } from '@angular/router';
 //usa os dados do backend trazidos pelo productService e transforma nos dados usados em html
 export class ProductListComponent implements OnInit{
 
-
   searchMode: boolean = false;
   products: Product[] = [];
   currentCategoryId: number = 1;
@@ -107,6 +106,10 @@ export class ProductListComponent implements OnInit{
       this.thePageSize = data.page.size;
       this.theTotalElements = data.page.totalElements;
     }
+  }
+
+  addToCart(theProduct: Product) {
+    console.log(`Adding to cart: ${theProduct.name}, ${theProduct.unitPrice}`);
   }
 
 }
