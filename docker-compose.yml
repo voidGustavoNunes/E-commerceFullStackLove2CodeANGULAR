@@ -1,9 +1,0 @@
-version: '3.8'
-
-services:
-  frontend:
-    build:
-      context: . 
-      dockerfile: Dockerfile  # O arquivo Dockerfile está no mesmo diretório
-    ports:
-      - "4200:80"  # O frontend será acessível na porta 4200 do host, e o Nginx vai servir na porta 80 do contêiner
